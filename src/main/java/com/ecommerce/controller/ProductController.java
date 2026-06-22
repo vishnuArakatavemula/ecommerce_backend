@@ -24,7 +24,7 @@ public class ProductController {
 
     @GetMapping
     public List<ProductDTO> getAllProducts() {
-        return productService.getAllProducts();g
+        return productService.getAllProducts();
     }
     // Replace only this method
     @GetMapping("/{id}")

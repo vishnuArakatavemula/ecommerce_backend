@@ -18,8 +18,8 @@ public class ProductController {
     private ProductService productService;
 
     @PostMapping
-    public Product saveProduct(@Valid @RequestBody Product product) {
-        return productService.saveProduct(product);
+    public ProductDTO saveProduct(@Valid @RequestBody ProductDTO dto) {
+        return productService.saveProduct(dto);
     }
 
     @GetMapping
@@ -33,10 +33,11 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public Product updateProduct(@PathVariable Long id,
-                                 @RequestBody Product product) {
+    public ProductDTO updateProduct(
+            @PathVariable Long id,
+            @RequestBody ProductDTO dto) {
 
-        return productService.updateProduct(id, product);
+        return productService.updateProduct(id, dto);
     }
 
     @DeleteMapping("/{id}")

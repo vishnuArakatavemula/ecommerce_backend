@@ -1,19 +1,45 @@
 package com.ecommerce.dto;
 
+import java.math.BigDecimal;
+
 public class ProductDTO {
 
     private Long id;
-    private String name;
-    private Double price;
 
+    private String name;
+
+    private String description;
+
+    private BigDecimal price;
+
+    private Integer stock;
+
+    private String imageUrl;
+
+    private Long categoryId;
+
+
+    // Default Constructor
     public ProductDTO() {
     }
 
-    public ProductDTO(Long id, String name, Double price) {
+
+    // Parameterized Constructor
+    public ProductDTO(Long id, String name, String description,
+                      BigDecimal price, Integer stock,
+                      String imageUrl, Long categoryId) {
+
         this.id = id;
         this.name = name;
+        this.description = description;
         this.price = price;
+        this.stock = stock;
+        this.imageUrl = imageUrl;
+        this.categoryId = categoryId;
     }
+
+
+    // Getters and Setters
 
     public Long getId() {
         return id;
@@ -31,11 +57,43 @@ public class ProductDTO {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 }

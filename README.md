@@ -39,4 +39,4 @@ Repository
      ↓
 JPA / Hibernate
      ↓
-MySQ
+MySQL
